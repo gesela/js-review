@@ -321,50 +321,105 @@ const fruits = ['apple', 'banana', 'orange']
 
 // Remove orange
 
-// fruits.pop()
+fruits.pop()
 // console.log(fruits)
 // console.log(fruits.splice(0,2)) < ANOTHER EXAMPLE
 
 // Add strawberry, kiwi, and grapes at the end
 
-// fruits.push('strawberry', 'kiwi', 'grapes')
-// console.log(fruits)remote
-// Add strawberry, kiwi, and grapes at the end
+fruits.push('strawberry', 'kiwi', 'grapes')
+// console.log(fruits)
 
 // Remove apple
 
+fruits.shift()
+// console.log(fruits)
+
 // Add mango at the beginning of the array
+
+fruits.unshift('mango')
+// console.log(fruits)
 
 // Add lemon, and grapefruit between mango and banana
 
+fruits.splice(1, 0, 'lemon', 'grapefruit')
+// console.log(fruits)
+
 // Remove banana and strawberry
+
+fruits.splice(3,2)
+// console.log(fruits)
 
 // Create a new array called exoticFruits. Add 3 exotic fruits inside of this array. Create a new variable and assign it with the value of concatinating fruits array and exoticFruits array.
 
+const exoticFruits = ['passion fruit', 'pineapple', 'coconut']
+const mixedFruits = fruits.concat(exoticFruits)
+// console.log(mixedFruits)
+
 // Print the last two exotic fruits without altering the newly concatenated array.
 
+// console.log(mixedFruits.slice(6))
+
 // Monalissa said she needs help re-organizing her items in alphabetical order.
+
 const monalissaIsMessy = ["pencil", "paper", "notebook", "computer"]
+// console.log(monalissaIsMessy.sort())
 
 // Kevin accidentally stepped into the mirror world and needs help reversing his words.
+
 const mirrorMirrorOnTheWall = ["all", "them", "of", "greatest", "the", "is", "who"]
+// console.log(mirrorMirrorOnTheWall.reverse())
 
 // ===== HIGHER ORDER METHODS =====
 // Rafael said he''s trying to stop cursing so much, and he wants to start with his text messages. Help him write code to eliminate the badword in his sentences. Must return a string sentence. Must use filter(). :) 
+
 const RafaelNoBadWords = "I am so tired of this badword food. I do not want this badword badword food."
+const textOne = RafaelNoBadWords.split(' ') 
+  // By using this method of split, we create an array, now named under "textOne."
+const filtered = textOne.filter((testParameter)=>{ 
+  // In order to use the filter loop, we need to name a parameter. The "testParameter" parameter is necessary to this particular method, because the loop needs a parameter to review the string elements in the array.
+  return testParameter !== 'badword'
+    //In the execution of the subsequent function, testParameter 'returns', or includes, all array elements do not equal 'badword'.
+})
+
+// Now that the array has been cleaned of 'badword', we must join all array elements in order to return a STRING sentence.
+// The method filtered.join(' ') simply returns an OBJECT, not a STRING. Therefore, we need to create a new variable defined by "filtered.join(' ') in order to print out an actual string."
+
+// const finalString = filtered.join(' ')
+// console.log(typeof(finalString)) // This confirms that the final variable is a STRING.
+// console.log(finalString)
+
 
 // Man math is hard. Let's make our computer do it for us. Use reduce() to find the total of the numbers in numbersToAddUp
-const numbersToAddUp = [99, 5677, 232, 84, 2, 231]
+// const numbersToAddUp = [99, 5677, 232, 84, 2, 231]
+
+// const sumOfNums = numbersToAddUp.reduce(function(previousValue, currentValue) {
+//   console.log(previousValue)
+// return previousValue + currentValue
+// })
+// console.log(sumOfNums)
 
 // ===== SPREAD OPERATOR ===== 
 
 // Create a variable and assign a value of a copied array using the spread operator
 
+let arr1 = [1, 3, 5, 7, 9]
+let arr2 = [...arr1]
+
 // Create two arrays with any elements and connect both of them using the spread operator. Save the connected arrays into a new variable.
+
+let arr3 = [2, 4, 6, 8, 10]
+newVar = [...arr2, ...arr3]
 
 // Using the variable with the newly connected arrays, use spread operator to add something at the end.
 
+testVar = [...newVar, 12]
+// console.log(testVar)
+
 // Using the variable with the newly connected arrays, use spread operator to add something at the beginning.
+
+secondTestVar = [0, ...testVar]
+// console.log(secondTestVar)
 
 // ===== ACCESS =====
 
@@ -390,31 +445,37 @@ const donutShop =[
   ]
 ]
 
-// Anthony wants applecrumble. Print please!
-// Tosi wants ihatethis. :) Print!
-
-// =================================================
-//                     IF/ELSE
-// =================================================
-
-// Teo is a person. I would hope so...
-// Check if Teo is a person. If true, print 'Teo is a person!' if not then print 'Teo is not a person!'
-// If Teo is a person, check to see if he is a male or a female. If male, print 'You got it right!' if not then print 'Wrong. Teo is going to remove you from the class.'.
-// If male, check to see if Teo is hungry. If Teo is 'hungry' then print 'Let's buy Teo some tacos!'. If Teo is 'not hungry' then print 'He doesn't need to eat.'. Anything else, print 'If Teo is not hungry, am I hungry?'
-
-// Create a if/else ternary to check if Gustavo is the coolest. If coolest, print 'You got that right!', else print 'James wants to argue. He says he's the best!'
-
 // =================================================
 //                     FUNCTIONS
 // =================================================
 
 // Don't forget to call your functions :)
 
+// sayGreeting()
+
 // Create a function called sayGreeting and PRINT 'Hello, ma'amsir!'
+
+// function sayGreeting() {
+//   console.log("Hello, ma'amsir!")
+// }
 
 // Create a function that takes a string as a parameter. PRINT 'This is my (STRING)'. Please replace the (STRING) with the parameter. Don't play with me haha.
 
+// stringParameter(`STRING`)
+// function stringParameter(x) {
+//   console.log(`This is my ${x}`)
+// }
+
+
 // Create a function called add that takes in three number parameters. Create 3 variables and assign numerical values to them. Invoke your add() and pass in those three variables as arguments.
+
+// let x = 5
+// let y = 6
+// let z = 7
+// function add(x, y, z){ 
+// let equation = x + y + z
+// console.log(equation)}
+// add(x, y, z)
 
 // Create a function called fightClub() that accepts a name parameter.  If the name:
 // 'Teo' RETURN '1st rule: You do not talk about Fight Club.'
@@ -423,11 +484,39 @@ const donutShop =[
 // 'Devin' RETURN '4th rule: Only two guys to a fight.'
 // Anything else, RETURN 'No shirts
 
+// function fightClub(name){
+//   if(name === 'Teo'){
+//     console.log("1st rule: You do not talk about Fight Club.")
+//   }else if(name === 'Manara'){
+//     console.log("2nd rule: YOU DO NOT TALK ABOUT FIGHT CLUB.")
+//   }else if(name === 'Liv') {
+//     console.log(`3rd rule: If someone yells "Stop!", goes limp, taps out, the fight is over.`)
+//   }else if(name === 'Devin'){
+//     console.log(`4th rule: Only two guys to a fight.`)
+//   }else{
+//     console.log(`No shirts`)
+//   }
+// }
+// fightClub('Liv')
+
 // Create a function called hello() that prints 'Hello'. Return an anonymous function inside hello() and have it print 'Goodbye'. Invoke your hello function in some way to see Hello and Goodbye in the console.
+
+// let greeting = function(departure) {
+//   console.log('Hello', departure)
+// }
+// greeting('Goodbye')
 
 // Create a function expression with your first name as the variable and then print your first and last name
 
+// const firstAndLastName = function(firstName, lastName) {
+//   return firstName + lastName
+// }
+// console.log(firstAndLastName('Jonathan',' Daley'))
+
 // Create an arrow function that accepts a number and have it return that number doubled
+
+// let multiplication = (x) => x*2
+// console.log(multiplication(3))
 
 // =================================================
 //                     OBJECTS
@@ -435,11 +524,23 @@ const donutShop =[
 
 // Create an object and call it human. Add a name, age, and location property. Give the properties values.
 
+const human = {
+  name: "Jonathan",
+  age: 31,
+  location: "Mass"
+}
+
 // Access the name using dot notation
+
+// console.log(human.name)
 
 // Access the age using square brackets
 
+// console.log(human['age'])
+
 // Use object destructuring to access location
+
+// const {name, age, location,} = human
 
 // ACCESS Granted
 const bulbasaur = {
@@ -460,16 +561,34 @@ const bulbasaur = {
 
 // Print overgrow
 
+// console.log(bulbasaur.abilities[0])
+
 // Print cut
+
+// console.log(bulbasaur.moves[2])
 
 // Print Bulbahhhh!!!!!
 
+// console.log(bulbasaur.sound())
+
 // Add a height of 7 to bulbasaur using the dot notation. (Don't change bulbasaur object manually)
+
+// bulbasaur.height = 7
+// console.log(bulbasaur.height)
 
 // Add a property called order and assign it a value of 1 using the square brackets. (Don't change bulbasaur object manually)
 
+// bulbasaur.order = [1]
+// console.log(bulbasaur.order)
+
 // Print an array that contains every single properties in bulbasaur
+
+// Object.keys(bulbasaur).forEach((prop)=> console.log(prop.split(" ")))
 
 // Print every single properties one by one in the console
 
+// Object.keys(bulbasaur).forEach((prop)=> console.log(prop));
+
 // Print an array that contains every single values in bulbasaur
+
+// Object.values(bulbasaur).forEach((prop)=> console.log(prop));
